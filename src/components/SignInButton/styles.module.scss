@@ -1,0 +1,16 @@
+.buttonLogar {
+    padding: 16px 24px;
+    border-radius: 12px;
+}
+
+.buttonLogado {
+    padding: 16px 24px;
+    border-radius: 12px;
+    background: green;
+
+    transition: 0.2s;
+
+    &:hover {
+        background: red;
+    }
+}
