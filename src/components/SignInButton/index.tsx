@@ -10,11 +10,11 @@ export function SignInButton() {
         <button
             className={styles.buttonLogado}
             onClick={() => signOut()}
-        > Logar</button>
+        > Logado </button>
     ) : (
         <button
             className={styles.buttonLogar}
             onClick={() => signIn('github')}
-        > Logado</button>
+        > Logar </button>
     )
 }
