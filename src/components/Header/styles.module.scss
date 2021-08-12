@@ -1,17 +1,18 @@
 .container {
-    height: 5rem;
     margin-bottom: 2rem;
 }
 
 .content {
-    max-width: 1120px;
-    height: 5rem;
+    max-width: 1200px;
+    border: 1px solid red;
     margin: 0 auto;
-    padding: 0 2rem;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+
 
     nav {
+        border: 2px solid blue;
         margin-left: 25rem;
         height: 5rem;
 
@@ -24,7 +25,6 @@
             color: var(--blue-100);
             font-size: 1.5rem;
             font-weight: bold;
-            font-family: 'Mukta', sans-serif;
 
             & + a {
                 margin-left: 1.5rem;
@@ -36,7 +36,5 @@
         }
     }
 
-    button {
-        margin-left: auto;
-    }
+   
 }

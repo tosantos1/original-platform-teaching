@@ -4,14 +4,14 @@ import styles from './styles.module.scss';
 export function Header() {
     return (
         <header className={styles.container}>
-            <div className={styles.content}>
+            <nav className={styles.content}>
                 <img src="/images/logoLR.png" alt="LR" />
-                <nav>
-                    <a>Início</a>
-                    <a>Curso</a>
-                </nav>
+                <ul>
+                    <li><a>Início</a></li>
+                    <li><a>Curso</a></li>
+                </ul>
                 <SignInButton />
-            </div>
+            </nav>
         </header>
     );
 }
