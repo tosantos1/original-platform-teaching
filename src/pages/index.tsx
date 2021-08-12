@@ -14,8 +14,22 @@ export default function Home({ product }: HomeProps) {
 
   return (
     <>
-      <h1 className={styles.hero}>Valor do curso: {product.amount}</h1>
-      <button className={styles.button}> Comprar curso</button>
+      <main className={styles.container}>
+        <section className={styles.hero}>
+          <span>
+            <img src="/images/raposa.svg" alt="raposa" />
+            Oi, bem vindo</span>
+          <h1>Aprendendo no presente <br /> as tecnologias do futuro</h1>
+          <p>Para acessar ao curso é <br /> por apenas <span>{product.amount}</span></p>
+          <button type="button"> Embarque para o futuro</button>
+        </section>
+        <section className={styles.lorem}>
+          <img src="/images/lorem.svg" alt="lorem" />
+          <img src="/images/lorem.svg" alt="lorem" />
+          <img src="/images/lorem.svg" alt="lorem" />
+          <img src="/images/lorem.svg" alt="lorem" />
+        </section>
+      </main>
     </>
   )
 }
