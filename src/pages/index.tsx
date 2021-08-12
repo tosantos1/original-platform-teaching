@@ -1,4 +1,6 @@
 import { GetStaticProps } from 'next';
+import { BuyButton } from '../components/BuyButton';
+import { SignInButton } from '../components/SignInButton';
 import { stripe } from '../services/stripe';
 
 import styles from './home.module.scss'
@@ -14,6 +16,7 @@ export default function Home({ product }: HomeProps) {
 
   return (
     <>
+
       <main className={styles.container}>
         <section className={styles.hero}>
           <span>
@@ -30,6 +33,11 @@ export default function Home({ product }: HomeProps) {
           <img src="/images/lorem.svg" alt="lorem" />
         </section>
       </main>
+
+      <h1 className={styles.hero}>Valor do curso: {product.amount}</h1>
+      <BuyButton priceId={product.priceId} />
+      <SignInButton />
+
     </>
   )
 }
