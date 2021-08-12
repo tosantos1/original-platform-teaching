@@ -1,4 +1,5 @@
 import { signIn, signOut, useSession } from 'next-auth/client';
+import { FaGoogle } from 'react-icons/fa';
 import styles from './styles.module.scss';
 
 export function SignInButton() {
@@ -8,13 +9,21 @@ export function SignInButton() {
 
     return session ? (
         <button
-            className={styles.buttonLogado}
+            type="button"
+            className={styles.loginButton}
             onClick={() => signOut()}
-        > Logado </button>
+        >
+            <FaGoogle />
+            Sair da conta
+        </button>
     ) : (
         <button
-            className={styles.buttonLogar}
+            type="button"
+            className={styles.loginButton}
             onClick={() => signIn('github')}
-        > Logar </button>
+        >
+            <FaGoogle />
+            Entrar com Gmail
+        </button>
     )
 }
