@@ -36,11 +36,6 @@ export default function Home({ product }: HomeProps) {
 
       <h1 className={styles.hero}>Valor do curso: {product.amount}</h1>
       <BuyButton priceId={product.priceId} />
-<<<<<<< HEAD
-=======
-      <SignInButton />
-
->>>>>>> 6a0d5cb837cbf76e85d85d7d48683eed3d7e1285
     </>
   )
 }
