@@ -1,6 +1,5 @@
 import { GetStaticProps } from 'next';
 import { BuyButton } from '../components/BuyButton';
-import { SignInButton } from '../components/SignInButton';
 import { stripe } from '../services/stripe';
 
 import styles from './home.module.scss'
