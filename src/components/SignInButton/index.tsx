@@ -13,7 +13,7 @@ export function SignInButton() {
             className={styles.loginButton}
             onClick={() => signOut()}
         >
-            <FaGoogle color="#1976D2" />
+            <FaGoogle />
             Sair da conta
         </button>
     ) : (
