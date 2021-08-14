@@ -67,11 +67,11 @@
     grid-template-columns: .1fr 1fr;
     img {
         &:first-child {
-            animation: bg-hero-0 3s 2s ease infinite alternate;
+            animation: bg-hero-0 4s 2s ease infinite alternate;
             
         }
         &:last-child {
-            animation: bg-hero-1 3s 2s ease infinite alternate;
+            animation: bg-hero-1 5s 3s ease infinite alternate;
         }
     }
 }
@@ -86,7 +86,7 @@
 }
 @keyframes bg-hero-1{
     0% {
-        transform: translate3d(0,-30px,0);
+        transform: translate3d(0,-80px,0);
     }
     100%{
         transform: translate3d(0,25px,0);

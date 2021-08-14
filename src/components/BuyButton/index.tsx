@@ -38,7 +38,7 @@ export function BuyButton({ priceId }: BuyButtonProps) {
       className={styles.buyButtonClass}
       onClick={() => buyButtonClick()}
     >
-      Comprar curso
+      Embarque para o futuro
     </button>
   )
 }
