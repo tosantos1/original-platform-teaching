@@ -66,6 +66,11 @@
   resolved "https://registry.yarnpkg.com/@hapi/hoek/-/hoek-9.1.1.tgz#9daf5745156fd84b8e9889a2dc721f0c58e894aa"
   integrity sha512-CAEbWH7OIur6jEOzaai83jq3FmKmv4PmX1JYfs9IrYcGEVI/lyL1EXJGCj7eFVJ0bg5QR8LMxBlEtA+xKiLpFw==
 
+"@iconfu/svg-inject@^1.2.3":
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/@iconfu/svg-inject/-/svg-inject-1.2.3.tgz#17ab680b382859e6121cf523cd3879bf15c88732"
+  integrity sha512-3v1MUAJqmJS4jmhHoCkSxt+EdJrjPHlLXrWocCT25kCxnxJto8028Z6CC406EL11KA53SDZgI/QQA5GEJAoiRw==
+
 "@next-auth/prisma-legacy-adapter@0.0.1-canary.127":
   version "0.0.1-canary.127"
   resolved "https://registry.yarnpkg.com/@next-auth/prisma-legacy-adapter/-/prisma-legacy-adapter-0.0.1-canary.127.tgz#09223de6d0350e53afc4bd0dda056a2fde27d8d3"

@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@iconfu/svg-inject": "^1.2.3",
     "@stripe/stripe-js": "^1.17.0",
     "axios": "^0.21.1",
     "faunadb": "^4.3.0",

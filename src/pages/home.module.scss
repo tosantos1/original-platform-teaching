@@ -1,7 +1,6 @@
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
 
     display: flex;
     align-items: center;
@@ -9,8 +8,7 @@
 }
 
 .hero {
-    max-width: 600px;
-
+    max-width: 900px;
 
     > span {
         display: flex;
@@ -60,22 +58,37 @@
         line-height: 1.5rem;
     }
 }
+// Hero animation
 
 .lorem {
-    max-width: 600px;
-    padding: 0;
+    z-index: -999;
+    max-width: 720px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-
+    grid-template-columns: .1fr 1fr;
     img {
-        width: 100%;
-        margin: 0;
         &:first-child {
-            margin-top: 6rem;
+            animation: bg-hero-0 3s 2s ease infinite alternate;
+            
         }
-
         &:last-child {
-            margin-top: -6rem;
+            animation: bg-hero-1 3s 2s ease infinite alternate;
         }
+    }
+}
+
+@keyframes bg-hero-0{
+    0% {
+        transform: translate3d(0,25px,0);
+    }
+    100%{
+        transform: translate3d(0,75px,0);
+    }
+}
+@keyframes bg-hero-1{
+    0% {
+        transform: translate3d(0,-30px,0);
+    }
+    100%{
+        transform: translate3d(0,25px,0);
     }
 }

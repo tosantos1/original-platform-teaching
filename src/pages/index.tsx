@@ -4,6 +4,8 @@ import { SignInButton } from '../components/SignInButton';
 import { stripe } from '../services/stripe';
 
 import styles from './home.module.scss'
+import SVGInject from "@iconfu/svg-inject";
+
 
 interface HomeProps {
   product: {
@@ -29,12 +31,9 @@ export default function Home({ product }: HomeProps) {
         <section className={styles.lorem}>
           <img src="/images/lorem.svg" alt="lorem" />
           <img src="/images/lorem.svg" alt="lorem" />
-          <img src="/images/lorem.svg" alt="lorem" />
-          <img src="/images/lorem.svg" alt="lorem" />
         </section>
       </main>
 
-      <h1 className={styles.hero}>Valor do curso: {product.amount}</h1>
       <BuyButton priceId={product.priceId} />
     </>
   )
