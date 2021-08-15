@@ -1,0 +1,43 @@
+.header {
+  max-width: 1500px;
+  margin: 0 auto;
+  margin-top: 6rem;
+
+  nav {
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .item_1 {
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        li {
+          list-style: none;
+          padding: 1rem 1rem;
+
+          font-size: 1.5rem;
+          font-weight: bold;
+
+          &:last-child {
+            color: #DB5500;
+          }
+        }
+      }
+    }
+
+    .item_2 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      h4 {
+        margin-left: 1.3rem;
+        font-size: 2rem;
+      }
+    }
+  }
+}
