@@ -7,7 +7,7 @@ export function AulasHeader() {
         <nav>
           <div className={styles.item_1}>
             <ul>
-              <li>Início</li>
+              <li>Curso</li>
               <span> &gt; </span>
               <li>Aulas</li>
             </ul>

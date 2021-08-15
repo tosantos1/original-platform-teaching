@@ -1,10 +1,15 @@
+import styles from './styles.module.scss'
+
 export function AulasBody() {
   return (
     <>
       <main>
-        <div id="sidebar">
+        <section id="sidebar">
 
-        </div>
+        </section>
+        <section id="content_aulas">
+
+        </section>
       </main>
     </>
   )
