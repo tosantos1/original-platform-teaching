@@ -62,7 +62,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
             const checkoutSession = event.data.object as Stripe.Checkout.Session
 
             await saveSubscription(
-              checkoutSession.subscription.toString(),
+              checkoutSession.payment_intent.toString(),
               checkoutSession.customer.toString(),
               true
             )
