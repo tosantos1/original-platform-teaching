@@ -20,7 +20,7 @@ export function SignInButton() {
         <button
             type="button"
             className={styles.loginButton}
-            onClick={() => signIn('github')}
+            onClick={() => signIn('google')}
         >
             <FaGoogle />
             Entrar com Gmail

@@ -14,7 +14,7 @@ export function BuyButton({ priceId }: BuyButtonProps) {
 
   async function buyButtonClick() {
     if (!session) {
-      signIn('github')
+      signIn('google')
       return;
     }
 
