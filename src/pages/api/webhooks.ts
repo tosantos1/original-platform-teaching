@@ -25,11 +25,12 @@ export const config = {
 
 const relevantEvents = new Set([
   'checkout.session.completed',
-  'customer.subscription.updated',
-  'customer.subscription.deleted',
+  'payment_intent.succeeded',
+  'customer.deleted',
 ])
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
+
   if (req.method === 'POST') {
     const buf = await buffer(req)
     const secret = req.headers['stripe-signature']
@@ -45,15 +46,16 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     const { type } = event;
 
     if (relevantEvents.has(type)) {
+      console.log('evento recebido', event)
       try {
         switch (type) {
-          case 'customer.subscription.updated':
-          case 'customer.subscription.deleted':
-            const subscription = event.data.object as Stripe.Subscription;
+          case 'customer.updated':
+          case 'customer.deleted':
+            const payment = event.data.object as Stripe.PaymentIntent;
 
             await saveSubscription(
-              subscription.id,
-              subscription.customer.toString(),
+              payment.id,
+              payment.customer.toString(),
               false
             );
 
@@ -62,7 +64,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
             const checkoutSession = event.data.object as Stripe.Checkout.Session
 
             await saveSubscription(
-              checkoutSession.subscription.toString(),
+              checkoutSession.payment_intent.toString(),
               checkoutSession.customer.toString(),
               true
             )
@@ -74,9 +76,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       } catch (err) {
         return res.json({ error: 'Webhook handler failed.' })
       }
+      res.json({ received: true })
     }
-
-    res.json({ received: true })
   } else {
     res.setHeader('Allow', 'POST')
     res.status(405).end('Method not allowed')
