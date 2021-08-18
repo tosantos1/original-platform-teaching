@@ -1,14 +1,17 @@
+import { useSession } from 'next-auth/client';
 import styles from './styles.module.scss'
 
 export function CursoBody() {
-  return (
+  const [session] = useSession();
+
+  return session ? (
     <main className={styles.container}>
       <div className={styles.card_1}>
         <div className={styles.c1_content}>
-          <img src="https://github.com/tosantos1.png" alt="Foto de perfil." />
+          <img src={session.user.image} alt="Foto de perfil." />
           <div className={styles.namemail}>
-            <p>Tiago Oliveira</p>
-            <p>tiagolivesan@outlook.com</p>
+            <p>{session.user.name}</p>
+            <p>{session.user.email}</p>
           </div>
         </div>
         <button>Acessar perfil</button>
@@ -27,5 +30,7 @@ export function CursoBody() {
       </div>
 
     </main>
+  ) : (
+    <h1>cadastre-se</h1>
   )
 }
