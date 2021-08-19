@@ -1,7 +1,9 @@
 
-import { signIn, useSession } from 'next-auth/client';
+import { useSession } from 'next-auth/client';
 import { api } from '../../services/api';
 import { getStripeJs } from '../../services/stripe-js';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css';
 
 import styles from './styles.module.scss';
 
@@ -14,7 +16,7 @@ export function BuyButton({ priceId }: BuyButtonProps) {
 
   async function buyButtonClick() {
     if (!session) {
-      signIn('google')
+      toast.error('Você precisa estar logado para continuar!');
       return;
     }
 
@@ -33,12 +35,15 @@ export function BuyButton({ priceId }: BuyButtonProps) {
   }
 
   return (
-    <button
-      type="button"
-      className={styles.buyButtonClass}
-      onClick={() => buyButtonClick()}
-    >
-      Embarque para o futuro
-    </button>
+    <>
+      <ToastContainer />
+      <button
+        type="button"
+        className={styles.buyButtonClass}
+        onClick={() => buyButtonClick()}
+      >
+        Embarque para o futuro
+      </button>
+    </>
   )
 }
