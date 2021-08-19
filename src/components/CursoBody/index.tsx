@@ -1,4 +1,5 @@
 import { useSession } from 'next-auth/client';
+import Link from 'next/link';
 import styles from './styles.module.scss'
 
 export function CursoBody() {
@@ -14,7 +15,7 @@ export function CursoBody() {
             <p>{session.user.email}</p>
           </div>
         </div>
-        <button>Acessar perfil</button>
+        <a>Acessar perfil</a>
       </div>
       <div className={styles.card_2}>
         <div className={styles.c2_content}>
@@ -26,7 +27,9 @@ export function CursoBody() {
               na web utilizando uma biblioteca modular e escalável.</p>
           </div>
         </div>
-        <button>Acessar Curso</button>
+        <Link href="/aulas">
+          <a>Acessar Curso</a>
+        </Link>
       </div>
 
     </main>
