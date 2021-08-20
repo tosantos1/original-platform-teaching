@@ -4,7 +4,7 @@ import { fauna } from "../../../services/fauna";
 import { stripe } from '../../../services/stripe';
 
 export async function saveSubscription(
-    paymentId: string,
+    subscriptionId: string,
     customerId: string,
     createAction = false,
 ) {
@@ -20,16 +20,14 @@ export async function saveSubscription(
         )
     )
 
-    const payment = await stripe.paymentIntents.retrieve(paymentId)
-
+    const subscription = await stripe.subscriptions.retrieve(subscriptionId)
 
     const subscriptionData = {
-        id: payment.id,
+        id: subscription.id,
         userId: userRef,
-        status: payment.status,
-        //  price_id: payment.pay.data[0].price_id,
+        status: subscription.status,
+        price_id: subscription.items.data[0].price.id,
     }
-
 
     if (createAction) {
         await fauna.query(
@@ -46,7 +44,7 @@ export async function saveSubscription(
                     q.Get(
                         q.Match(
                             q.Index('subscription_by_id'),
-                            paymentId,
+                            subscriptionId,
                         )
                     )
                 ),

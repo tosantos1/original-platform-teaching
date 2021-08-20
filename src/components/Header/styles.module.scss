@@ -22,10 +22,14 @@
     a {
         padding: 0rem .3rem;
         &:hover {
-            color: #FF6C0E;
+            color: var(--orange-300);
 
-            transition: .4s ease;
+            transition: .2s ease;
         }
         
     } 
+}
+
+.active {
+    color: var(--orange-300);
 }
