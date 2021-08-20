@@ -1,0 +1,85 @@
+.main {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 5rem 0rem;
+
+  display: flex;
+  align-items: flex-start;
+
+  .sectionAccordion {
+    margin-top: 18px;
+  }
+  .sectionVideo{
+    margin-left: 7rem;
+
+    width: 100%;
+    height: 100vh;
+
+    iframe {
+      margin-top: -30px;
+      width: 100%;
+      height: 720px;
+    }
+  }
+}
+.accordion {
+  width: 100%;
+  max-width: 540px;
+  
+}
+.accordionHeading {
+  background: linear-gradient(90.14deg, rgba(219, 85, 0, 0.78) 14.08%, rgba(255, 108, 14, 0.63) 88.89%);
+
+  width: 280px;
+
+  padding: 1rem 1rem;
+
+  .accordionContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  p {
+    color: #FFF8F3;
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+    font-weight: 600;
+  }
+
+  span {
+    cursor: pointer;
+  }
+}
+.accordionContent{
+  height: 0;
+  opacity: 0;
+
+  display: flex;
+  overflow: hidden;
+  transition: all 600ms ease-in-out;
+
+  .show {
+    height: 180px;
+    opacity: 1;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+.accordionConteudos {
+  padding: 1rem 1rem;
+
+  .topics {
+    padding: .4rem 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    p {
+      font-size: 1.3rem;
+    }
+  }
+}
