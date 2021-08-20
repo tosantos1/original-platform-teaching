@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import styles from './styles.module.scss'
 
 export function AulasHeader() {
@@ -7,7 +8,13 @@ export function AulasHeader() {
         <nav>
           <div className={styles.item_1}>
             <ul>
-              <li>Curso</li>
+              <li>
+                <Link href="/curso">
+                  <a>
+                    Curso
+                  </a>
+                </Link>
+              </li>
               <span> &gt; </span>
               <li>Aulas</li>
             </ul>

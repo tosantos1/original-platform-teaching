@@ -6,6 +6,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
 
 import styles from './styles.module.scss';
+import { useRouter } from 'next/router';
 
 interface BuyButtonProps {
   priceId: string;
@@ -13,10 +14,16 @@ interface BuyButtonProps {
 
 export function BuyButton({ priceId }: BuyButtonProps) {
   const [session] = useSession()
+  const router = useRouter()
 
   async function buyButtonClick() {
     if (!session) {
       toast.error('Você precisa estar logado para continuar!');
+      return;
+    }
+
+    if (session.activeSubscription) {
+      router.push('/curso');
       return;
     }
 
