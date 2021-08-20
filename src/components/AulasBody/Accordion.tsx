@@ -23,16 +23,22 @@ export function Accordion({ title, active, setActive }: Props) {
       <div className={(active === title ? "show" : "") + styles.accordionContent}>
         <div className={styles.accordionConteudos}>
           <div className={styles.topics}>
-            <p>01 - Básico HTML </p>
-            <input type="checkbox"></input>
+            <label>
+              <span>01 - Básico HTML</span>
+              <input type="checkbox" />
+            </label>
           </div>
           <div className={styles.topics}>
-            <p>02 - Classes e IDs </p>
-            <input type="checkbox"></input>
+            <label>
+              <span>02 - Classes e IDs</span>
+              <input type="checkbox" />
+            </label>
           </div>
           <div className={styles.topics}>
-            <p>03 - Tag e Metas </p>
-            <input type="checkbox"></input>
+            <label>
+              <span>03 - Tag e Metas</span>
+              <input type="checkbox" />
+            </label>
           </div>
         </div>
       </div>
