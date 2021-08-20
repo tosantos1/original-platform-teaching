@@ -14,7 +14,7 @@ export function AulasBody() {
           <Accordion title="Introdução CSS" active={active} setActive={setActive} />
         </section>
         <section className={styles.sectionVideo}>
-          <iframe src="https://player.vimeo.com/video/539964022?h=2903e0cbde&color=fe03e1&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" ></iframe>
+          <iframe src="https://player.vimeo.com/video/539964022?h=2903e0cbde&color=fe03e1&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
         </section>
       </main>
     </>
