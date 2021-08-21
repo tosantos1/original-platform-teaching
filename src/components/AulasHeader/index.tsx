@@ -9,9 +9,9 @@ export function AulasHeader() {
           <div className={styles.item_1}>
             <ul>
               <li>
-                <Link href="/curso">
+                <Link href="/dashboard">
                   <a>
-                    Curso
+                    Dashboard
                   </a>
                 </Link>
               </li>

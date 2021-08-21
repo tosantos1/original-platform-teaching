@@ -3,7 +3,7 @@ import { getSession } from 'next-auth/client'
 import { CursoBody } from '../../components/CursoBody'
 import { CursoHeader } from '../../components/CursoHeader'
 
-export default function Curso() {
+export default function Dashboard() {
   return (
     <>
       <CursoHeader />

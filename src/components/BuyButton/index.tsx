@@ -23,7 +23,7 @@ export function BuyButton({ priceId }: BuyButtonProps) {
     }
 
     if (session.activeSubscription) {
-      router.push('/curso');
+      router.push('/dashboard');
       return;
     }
 

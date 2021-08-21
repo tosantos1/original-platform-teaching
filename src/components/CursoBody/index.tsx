@@ -27,8 +27,8 @@ export function CursoBody() {
               na web utilizando uma biblioteca modular e escalável.</p>
           </div>
         </div>
-        <Link href="/aulas">
-          <a>Acessar Curso</a>
+        <Link href="/dashboard/aulas">
+          <a>Acessar Aulas</a>
         </Link>
       </div>
 
