@@ -18,7 +18,7 @@ export function BuyButton({ priceId }: BuyButtonProps) {
 
   async function buyButtonClick() {
     if (!session) {
-      toast.error('Você precisa estar logado para continuar!');
+      router.push('/error');
       return;
     }
 
