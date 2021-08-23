@@ -14,7 +14,7 @@ export function SignInButton() {
             onClick={() => signOut()}
         >
             <FaGoogle />
-            Sair da conta
+            {session.user.name}
         </button>
     ) : (
         <button
