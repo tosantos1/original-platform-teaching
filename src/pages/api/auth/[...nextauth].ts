@@ -6,8 +6,8 @@ import { query as q } from 'faunadb';
 export default NextAuth({
     providers: [
         Providers.Google({
-            clientId: process.env.GOOGLE_CLIENT_ID,
-            clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+            clientId: '931554392174-pdn87vdl4vvbqkum1v43ov3im4uh4nlt.apps.googleusercontent.com',
+            clientSecret: 'tN-28_fZuTL21LltJDiBXUBh',
             authorizationUrl: 'https://accounts.google.com/o/oauth2/v2/auth?prompt=consent&access_type=offline&response_type=code',
             // scope: 'read:user 1',
         }),
@@ -53,8 +53,6 @@ export default NextAuth({
                     activeSubscription: null,
                 }
             }
-
-
         },
 
         async signIn(user, account, profile) {

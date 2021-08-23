@@ -18,7 +18,7 @@ export function BuyButton({ priceId }: BuyButtonProps) {
 
   async function buyButtonClick() {
     if (!session) {
-      router.push('/error');
+      router.push('/dashboard/error');
       return;
     }
 
