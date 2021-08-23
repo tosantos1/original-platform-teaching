@@ -12,13 +12,6 @@
     align-items: center;
     justify-content: space-between;
 
-    ul {
-        display: flex;
-        li {
-            padding: .5rem .5rem;
-            list-style: none;
-        }
-    }
     a {
         padding: 0rem .3rem;
         &:hover {
@@ -28,6 +21,12 @@
         }
         
     } 
+
+    @media screen and (max-width: 768px) {
+        nav {
+            display: none;
+        }
+    }
 }
 
 .active {
