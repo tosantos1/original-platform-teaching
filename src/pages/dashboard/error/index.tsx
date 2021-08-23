@@ -1,3 +1,5 @@
+import { GetServerSideProps } from 'next';
+import { getSession } from 'next-auth/client';
 import styles from './styles.module.scss';
 
 export default function Error() {
@@ -14,3 +16,21 @@ export default function Error() {
     </main>
   )
 }
+
+// export const getServerSideProps: GetServerSideProps = async ({ req, params }) => {
+//   const session = await getSession({ req })
+
+//   if (session?.activeSubscription) {
+//     return {
+//       redirect: {
+//         destination: '/dashboard',
+//         permanent: false,
+//       }
+//     }
+//   }
+//   return {
+//     props: {
+
+//     }
+//   }
+// }
