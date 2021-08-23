@@ -22,6 +22,6 @@ export function CursoHeader() {
       </main>
     </>
   ) : (
-    <h1>cadastre-se</h1>
+    <h1></h1>
   )
 }

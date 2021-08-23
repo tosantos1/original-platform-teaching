@@ -27,6 +27,17 @@ export function CursoBody() {
               na web utilizando uma biblioteca modular e escalável.</p>
           </div>
         </div>
+        <div className={styles.c2_contentMobile}>
+          <div className={styles.imgTitle}>
+            <img src="/images/react.svg" alt="" />
+            <h1>Curso <span>React JS</span></h1>
+            <p>Frontend</p>
+          </div>
+          <div className={styles.curso}>
+            <p>Desenvolva interfaces modernas e reativas
+              na web utilizando uma biblioteca modular e escalável.</p>
+          </div>
+        </div>
         <Link href="/dashboard/aulas">
           <a>Acessar Aulas</a>
         </Link>

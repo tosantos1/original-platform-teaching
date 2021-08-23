@@ -34,6 +34,10 @@
       align-items: center;
       justify-content: center;
 
+      @media screen and (max-width: 920px) {
+          display: none;
+      }
+
       h4 {
         margin-left: 1.3rem;
         font-size: 2rem;
